@@ -1,0 +1,22 @@
+.wrapper {
+    background-color: darkcyan;
+    width: 50%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(13, 227, 227);
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    box-shadow: 0px 0px 5px rgb(140, 232, 232);
+    cursor: grab;
+}   
+
+.title span {
+    font-size: 2rem;
+}

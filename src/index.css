@@ -1,7 +1,20 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .wrapper {
-    background-color: darkcyan;
     width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     margin: 0 auto;
+}
+
+.accordian {
+    background-color: darkcyan;
     padding: 2rem;
 }
 
@@ -9,14 +22,23 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: grab;
+} 
+
+.title span {
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
+.item {
     border: 1px solid rgb(13, 227, 227);
     padding: 10px;
     border-radius: 20px;
     margin-top: 10px;
     box-shadow: 0px 0px 5px rgb(140, 232, 232);
-    cursor: grab;
-}   
+}
 
-.title span {
-    font-size: 2rem;
+.item p {
+    font-size: 20px;
+    color: whitesmoke;
 }

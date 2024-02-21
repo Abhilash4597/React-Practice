@@ -5,12 +5,14 @@
 }
 
 .wrapper {
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: 100vh;
     margin: 0 auto;
+    /* background: linear-gradient(45deg, black, transparent); */
+    background: linear-gradient( rgb(202, 235, 235), rgb(136, 229, 229), rgb(57, 224, 224));
 }
 
 .wrapper button {

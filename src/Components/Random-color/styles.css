@@ -42,7 +42,7 @@ button:hover {
     gap: 2rem;
 }
 
-h3,h1 {
+.heading h3,.heading h1 {
     color: whitesmoke;
     text-align: center;
     font-size: 40px;

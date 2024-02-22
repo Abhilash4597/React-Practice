@@ -26,38 +26,39 @@ export default function RandomColor() {
     const g = randomColor(256);
     const b = randomColor(256);
 
-    setColor(`rgb${r},${g},${b}`);
+    setColor(`rgb(${r},${g},${b})`);
   }
 
   return (
     <div className="container" style={{ backgroundColor: color }}>
-      <div>
+      <div className="btn" style={{ backgroundColor: color }}>
         <button
           onClick={() => {
             setTypeOfColor("hex");
           }}>
           Create HEX Color
         </button>
-        <h3>{typeOfColor === "rgb" ? "RGB Color" : "HEX Color"}</h3>
-        <h1>{color}</h1>
-      </div>
-      <div>
         <button
           onClick={() => {
             setTypeOfColor("rgb");
           }}>
           Create RGB Color
         </button>
-        <span></span>
       </div>
-      <button
-        onClick={
-          typeOfColor === "hex"
-            ? handleCreateRandomColorHex
-            : handleCreateRandomColorRGB
-        }>
-        Create Random Color
-      </button>
+      <div className="heading" style={{ backgroundColor: color }}>
+        <button
+          onClick={
+            typeOfColor === "hex"
+              ? handleCreateRandomColorHex
+              : handleCreateRandomColorRGB
+          }>
+          Create Random Color
+        </button>
+        <div>
+          <h3>{typeOfColor === "rgb" ? "RGB COLOR" : "HEX COLOR"}</h3>
+          <h1>{color}</h1>
+        </div>
+      </div>
     </div>
   );
 }

@@ -7,7 +7,7 @@ const data = [
   },
   {
     id: "2",
-    question: "What are they used for?",
+    question: "What are accordion used for?",
     answer:
       "They are commonly employed in various contexts, including FAQs, product descriptions, navigation menus, settings panels, and data tables, to save screen space and provide a structured and user-friendly interface for presenting information or options.",
   },

@@ -21,13 +21,14 @@ export default function StarRating({ noOfStar = 5 }) {
   return (
     <div className="container">
       {[...Array(noOfStar)].map((_, index) => {
+        index += 1;
         return (
           <FaStar
             key={index}
             onClick={() => {
               handleClick(index);
             }}
-            onMouseEnter={() => {
+            onMouseMove={() => {
               handleMouseEnter(index);
             }}
             onMouseLeave={() => {

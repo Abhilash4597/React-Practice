@@ -7,15 +7,15 @@ export default function StarRating({ noOfStar = 5 }) {
   const [hover, setHover] = useState(0);
 
   function handleClick(getCurrentIndex) {
-    console.log(getCurrentIndex);
+    setRating(getCurrentIndex);
   }
 
   function handleMouseEnter(getCurrentIndex) {
-    console.log(getCurrentIndex);
+    setHover(getCurrentIndex);
   }
 
-  function handleMouseLeave(getCurrentIndex) {
-    console.log(getCurrentIndex);
+  function handleMouseLeave() {
+    setHover(rating);
   }
 
   return (
@@ -25,6 +25,7 @@ export default function StarRating({ noOfStar = 5 }) {
         return (
           <FaStar
             key={index}
+            className={index <= (hover || rating) ? "active" : "inActive"}
             onClick={() => {
               handleClick(index);
             }}

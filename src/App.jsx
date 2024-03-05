@@ -17,7 +17,7 @@ function App() {
       {/* <StarRating noOfStar={5} /> */}
 
       {/* Image-Slider Component */}
-      <ImageSlider />
+      <ImageSlider url={{}} limit={{}} />
     </div>
   );
 }

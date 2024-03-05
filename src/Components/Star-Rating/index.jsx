@@ -35,7 +35,7 @@ export default function StarRating({ noOfStar = 5 }) {
             onMouseLeave={() => {
               handleMouseLeave(index);
             }}
-            size={40}
+            size={50}
           />
         );
       })}

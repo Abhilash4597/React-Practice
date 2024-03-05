@@ -10,8 +10,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #f4d0c1af;
 }
 
 .active {
-  color: yellow;
+  color: #fff700;
 }

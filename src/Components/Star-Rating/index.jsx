@@ -19,7 +19,7 @@ export default function StarRating({ noOfStar = 5 }) {
   }
 
   return (
-    <div className="container">
+    <div className="star_container">
       {[...Array(noOfStar)].map((_, index) => {
         index += 1;
         return (

@@ -36,5 +36,19 @@ export default function ImageSlider({ url, limit }) {
     return <div className="error">Error Occured !! {errorMsg}</div>;
   }
 
-  return <div className="sliderComponent">ImageSlider</div>;
+  return (
+    <div className="sliderComponent">
+      {images ? (
+        images.map((image) => {
+          return (
+            <div className="img_cont" key={image.id}>
+              <img src={image.download_url} />
+            </div>
+          );
+        })
+      ) : (
+        <h2>No data Found</h2>
+      )}
+    </div>
+  );
 }

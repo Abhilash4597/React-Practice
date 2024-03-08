@@ -53,7 +53,9 @@ export default function ImageSlider({ url, limit }) {
       <span className="circle-indicators">
         {images && images.length
           ? images.map((_, index) => {
-              <button key={index} className="current-indicator"></button>;
+              return (
+                <button key={index} className="current-indicator"></button>
+              );
             })
           : null}
       </span>

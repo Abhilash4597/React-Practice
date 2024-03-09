@@ -4,17 +4,28 @@
   box-sizing: border-box;
 }
 
-.sliderComponent {
+.sliderContainer {
   height: 100vh;
   width: 100vw;
   background-color: burlywood;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+.sliderComponent {
+  display: flex;
 }
 
 .img_cont img {
-  width: 100%;
+  width: 10%;
+}
+
+.arrow {
+  font-size: 4rem;
+  color: whitesmoke;
+  z-index: 2;
 }
 /* 
 .current-indicator {

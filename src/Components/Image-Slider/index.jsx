@@ -38,18 +38,20 @@ export default function ImageSlider({ url, limit }) {
   }
 
   return (
-    <div className="sliderComponent">
-      <BsArrowLeftCircleFill className="arrow-left" />
-      {images && images.length
-        ? images.map((image) => {
-            return (
-              <div className="img_cont" key={image.id}>
-                <img src={image.download_url} alt={image.download_url} />
-              </div>
-            );
-          })
-        : null}
-      <BsArrowRightCircleFill className="arrow-right" />
+    <div className="sliderContainer">
+      <div className="sliderComponent">
+        <BsArrowLeftCircleFill className="arrow arrow-left" />
+        {images && images.length
+          ? images.map((image) => {
+              return (
+                <div className="img_cont" key={image.id}>
+                  <img src={image.download_url} alt={image.download_url} />
+                </div>
+              );
+            })
+          : null}
+        <BsArrowRightCircleFill className="arrow arrow-right" />
+      </div>
       <span className="circle-indicators">
         {images && images.length
           ? images.map((_, index) => {

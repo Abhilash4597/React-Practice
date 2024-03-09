@@ -16,20 +16,34 @@
 
 .sliderComponent {
   display: flex;
+  position: relative;
 }
 
 .img_cont img {
-  width: 10%;
+  height: 90vh;
 }
 
 .arrow {
-  font-size: 4rem;
+  font-size: 3rem;
   color: whitesmoke;
   z-index: 2;
+  position: absolute;
+  cursor: pointer;
 }
-/* 
+
+.arrow-left {
+  left: 0;
+  top: 50%;
+}
+
+.arrow-right {
+  right: 0;
+  top: 50%;
+}
+
 .current-indicator {
-  height: 1rem;
-  width: 2rem;
-  z-index: 2990;
-} */
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  margin: 0 2.5px;
+}

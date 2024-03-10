@@ -37,26 +37,51 @@ export default function ImageSlider({ url, limit }) {
     return <div className="error">Error Occured !! {errorMsg}</div>;
   }
 
+  function handlePrev() {
+    setCurrentSlide(currentSlide === 0 ? images.length - 1 : currentSlide - 1);
+  }
+  function handleNext() {
+    setCurrentSlide(currentSlide === images.length - 1 ? 0 : currentSlide + 1);
+  }
+
   return (
     <div className="sliderContainer">
       <div className="sliderComponent">
-        <BsArrowLeftCircleFill className="arrow arrow-left" />
+        <BsArrowLeftCircleFill
+          className="arrow arrow-left"
+          onClick={handlePrev}
+        />
         {images && images.length
-          ? images.map((image) => {
+          ? images.map((image, index) => {
               return (
-                <div className="img_cont" key={image.id}>
-                  <img src={image.download_url} alt={image.download_url} />
-                </div>
+                <img
+                  className={
+                    currentSlide === index
+                      ? "img_cont"
+                      : "img_cont hideImageCont"
+                  }
+                  key={image.id}
+                  src={image.download_url}
+                  alt={image.download_url}
+                />
               );
             })
           : null}
-        <BsArrowRightCircleFill className="arrow arrow-right" />
+        <BsArrowRightCircleFill
+          className="arrow arrow-right"
+          onClick={handleNext}
+        />
       </div>
       <span className="circle-indicators">
         {images && images.length
           ? images.map((_, index) => {
               return (
-                <button key={index} className="current-indicator"></button>
+                <button
+                  key={index}
+                  className="current-indicator"
+                  onClick={() => {
+                    setCurrentSlide(index);
+                  }}></button>
               );
             })
           : null}

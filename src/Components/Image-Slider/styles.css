@@ -46,4 +46,13 @@
   border-radius: 10px;
   border: none;
   margin: 0 2.5px;
+  cursor: pointer;
+}
+
+.hideImageCont {
+  display: none;
+}
+
+.updateCurrInd {
+  background-color: gray;
 }

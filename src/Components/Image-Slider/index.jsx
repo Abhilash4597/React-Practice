@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "../Image-Slider/styles.css";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 
-export default function ImageSlider({ url, limit }) {
+export default function ImageSlider({ url, limit, page }) {
   const [images, setImages] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [errorMsg, setErrorMsg] = useState(null);
@@ -17,7 +17,7 @@ export default function ImageSlider({ url, limit }) {
   async function fetchImages(getUrl) {
     try {
       setLoading(true);
-      const response = await fetch(`${getUrl}?page=1&limit=${limit}`);
+      const response = await fetch(`${getUrl}?${page}=1&limit=${limit}`);
       const data = await response.json();
       if (data) {
         setImages(data);
@@ -78,7 +78,11 @@ export default function ImageSlider({ url, limit }) {
               return (
                 <button
                   key={index}
-                  className="current-indicator"
+                  className={
+                    currentSlide === index
+                      ? "current-indicator"
+                      : "current-indicator updateCurrInd"
+                  }
                   onClick={() => {
                     setCurrentSlide(index);
                   }}></button>

@@ -3,6 +3,8 @@
 // import StarRating from "./Components/Star-Rating";
 // import ImageSlider from "./Components/Image-Slider";
 
+import LoadMore from "./Components/Load-More";
+
 function App() {
   return (
     <div>
@@ -17,6 +19,9 @@ function App() {
 
       {/* Image-Slider Component */}
       {/* <ImageSlider url={"https://picsum.photos/v2/list"} limit={10} page={2} /> */}
+
+      {/* Load-More Component */}
+      <LoadMore />
     </div>
   );
 }

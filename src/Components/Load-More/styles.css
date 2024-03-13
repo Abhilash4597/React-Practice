@@ -1,5 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: chartreuse;
+}
+
 .LoadMore_Container {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

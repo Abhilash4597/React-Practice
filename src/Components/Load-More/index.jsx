@@ -1,5 +1,9 @@
 import "../Load-More/styles.css";
 
 export default function LoadMore() {
-  return <div className="LoadMore_Container">LoadMore</div>;
+  return (
+    <div className="loadMore_Container">
+      <div className="loadMore">LoadMore</div>
+    </div>
+  );
 }

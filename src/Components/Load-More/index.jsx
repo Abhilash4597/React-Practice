@@ -11,6 +11,7 @@ export default function LoadMore() {
     <div className="loadMore_Container">
       <div className="loadMore" onClick={handleClick}>
         {load}
+        <button>Click</button>
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ function App() {
       {/* <ImageSlider url={"https://picsum.photos/v2/list"} limit={10} page={2} /> */}
 
       {/* Load-More Component */}
-      <LoadMore />
+      <LoadMore url={""} limit={10} page={2} />
     </div>
   );
 }

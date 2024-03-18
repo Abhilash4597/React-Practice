@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../Load-More/styles.css";
 
-export default function LoadMore() {
+export default function LoadMore({url,limit,page}) {
   const [load, setLoad] = useState(0);
 
   function handleClick() {

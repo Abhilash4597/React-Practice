@@ -21,10 +21,3 @@
   gap: 2rem;
   font-size: 2rem;
 }
-
-.loadMore button {
-  cursor: pointer;
-  padding: 5px;
-  font-weight: 800;
-  font-size: 1rem;
-}

@@ -52,7 +52,7 @@ export default function RandomColor() {
               ? handleCreateRandomColorHex
               : handleCreateRandomColorRGB
           }>
-          Create Random Color
+          Random Color
         </button>
         <div>
           <h3>{typeOfColor === "rgb" ? "RGB COLOR" : "HEX COLOR"}</h3>
